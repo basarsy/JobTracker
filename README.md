@@ -27,10 +27,9 @@ This project showcases how to integrate and manage background tasks such as logg
 
     ```bash
    "ConnectionStrings": {
-    "DefaultConnection": "Host=localhost;Database=jobtracker_db;Username=postgres;Password=yourpassword"
+    "DefaultConnection": "Host=localhost;Port=yourport;Database=yourdbname;Username=yourusername;Password=yourpassword"
     }
    
-2. **Access the Hangfire Dashboard**
+2. **Accessing the Hangfire Dashboard**
 
-
-    http://localhost:<port>/hangfire
+    http://localhost:yourport/hangfire
