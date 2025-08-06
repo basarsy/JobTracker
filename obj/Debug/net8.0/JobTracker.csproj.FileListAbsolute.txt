@@ -67,3 +67,4 @@
 /home/basar/RiderProjects/JobTracker/obj/Debug/net8.0/JobTracker.pdb
 /home/basar/RiderProjects/JobTracker/obj/Debug/net8.0/JobTracker.genruntimeconfig.cache
 /home/basar/RiderProjects/JobTracker/obj/Debug/net8.0/ref/JobTracker.dll
+/home/basar/RiderProjects/JobTracker/obj/Debug/net8.0/JobTracker.sourcelink.json
