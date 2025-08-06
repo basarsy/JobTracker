@@ -42,7 +42,7 @@ app.MapHangfireDashboard("/hangfire");
 RecurringJob.AddOrUpdate<Worker>
 ("CheckTime",
     worker => worker.CheckTime(),
-    Cron.Minutely
+    Cron.Minutely()
     );
 
 RecurringJob.AddOrUpdate<Worker>(
@@ -54,22 +54,27 @@ RecurringJob.AddOrUpdate<Worker>(
 RecurringJob.AddOrUpdate<Worker>(
     "TypeSomething",
     worker => worker.TypeSomething("This is an minutely automated message!"),
-    Cron.Minutely);
+    Cron.Minutely()
+    );
 
 RecurringJob.AddOrUpdate<Worker>(
     "TimeIs12",
     worker => worker.TimeIs12(),
-    "0 12 * * *");
+    "0 12 * * *"
+    );
 
 BackgroundJob.Enqueue<Worker>(
-    sayHello => sayHello.SayHello());
+    sayHello => sayHello.SayHello()
+    );
 
 BackgroundJob.Enqueue<Worker>(
     worker=> worker.TypeSomething(
-        "I typed this manually!"));
+        "I typed this manually!")
+    );
 BackgroundJob.Enqueue<Worker>(
     worker => worker.Multiply(
-            5, 10));
+            5, 10)
+    );
 BackgroundJob.Enqueue<Worker>(worker => worker.ErrorTest());
 
 app.Run();
